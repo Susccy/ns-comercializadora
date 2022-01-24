@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon-tools.png" type="image/png" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./styles.css" />
+  <title>NS Comercializadora</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  
+    <nav class="nav">
+    <div class="wrapper container">
+      <div class="logo"><a href="">
+        <img src="./images/ns_logo.png" alt="">
+      </a>
+      </div>
+      <ul class="nav-list">
+        <div class="top">
+          <label for="" class="btn close-btn"><i class="fas fa-times"></i></label>
+        </div>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="products.html">Productos</a></li>
+        <li><a href="index.html#categories">Categorías</a></li>
+        <li><a href="index.html#new">Novedades</a></li>
+        <li><a href="index.html#brands">Marcas</a></li>
+        <li><a href="index.html">Contáctanos</a></li>
+        <!-- icons -->
+        <li class="icons">
+          <a href="cart.html">
+          </a>
+          
+        </li>
+      </ul>
+      <label for="" class="btn open-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+  <!-- PRODUCTS -->
+
+  <section class="section products">
+    <div class="products-layout container">
+      <div class="col-1-of-4">
+        <div>
+          <div class="block-title">
+            <h3>Categorías</h3>
+          </div>
+
+          <ul class="block-content">
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Abrasivos</span>
+                <small>(10)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Sólidos</span>
+                <small>(7)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span> Soldadura</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Herramientas</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Cepillos de Alambre</span>
+                <small>(10)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Productos de Lija</span>
+                <small>(5)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Productos de Diamante</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Productos de Fibra</span>
+                <small>(12)</small>
+              </label>
+            </li>
+
+          </ul>
+        </div>
+
+        <div>
+          <div class="block-title">
+            <h3>Marcas</h3>
+          </div>
+
+          <ul class="block-content">
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Austromex</span>
+                <small>(10)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Cinasa</span>
+                <small>(7)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span> Maxtools</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Hecort</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Weston</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Makita</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Tulmex</span>
+                <small>(3)</small>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Tuk</span>
+                <small>(3)</small>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-3-of-4">
+        <form action="">
+          <div class="item">
+            <label for="sort-by">Ordenar por</label>
+            <select name="sort-by" id="sort-by">
+              <option value="title" selected="selected">Nombre</option>
+              <option value="number">Precio</option>
+              <option value="search_api_relevance">Relevancia</option>
+              <option value="created">Nuevo</option>
+            </select>
+          </div>
+          <div class="item">
+            <label for="order-by">Orden</label>
+            <select name="order-by" id="sort-by">
+              <option value="ASC" selected="selected">Ascendente</option>
+              <option value="DESC">Descendente</option>
+            </select>
+          </div>
+          <a href="">Aplicar</a>
+        </form>
+
+        <div class="product-layout">
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="./images/Productos/product-2.png" alt="" />
+            </div>
+            <div class="bottom">
+              <a href="">Disco de Corte</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <ul class="pagination">
+          <span>1</span>
+          <span>2</span>
+          <span class="icon">››</span>
+          <span class="last">Último »</span>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          <h3>EXTRAS</h3>
+          <a href="#">Marcas</a>
+          <a href="#">Descuentos</a>
+          <a href="#">Asesoría</a>
+        </div>
+        <div class="footer-center">
+          <h3>INFORMACIÓN</h3>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Políticas de privacidad</a>
+          <a href="#">Términos y condiciones</a>
+        </div>
+        <div class="footer-center">
+          <h3>SÍGUENOS</h3>
+          <a href="https://www.facebook.com/Comercializadora-Industrial-Ns-134343497057541/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></i></a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+        </div>
+        <div class="footer-center">
+          <h3>CONTÁCTANOS</h3>
+          <div>
+            <a href="https://goo.gl/maps/zmJNwf9twp2saSaF6" target="_blank"><i class="fas fa-map-marked-alt"></i>Benito Juárez #1000, Brisas del Río Monclova, Coahuila</a>
+          </div>
+          <div>
+            <i class="far fa-envelope"></i>comercializadoraindustrialns@outlook.com
+          </div>
+          <div>
+            <i class="fas fa-phone-square-alt"></i>
+            866-641-8089
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Custom Scripts -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
