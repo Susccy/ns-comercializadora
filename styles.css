@@ -1399,7 +1399,8 @@ th:last-child {
   border-radius: 3rem;
 }
 
-.pagination span:hover {
+.pagination span:hover,
+.pagination span.current-page {
   border: 1px solid var(--primary);
   background-color: var(--primary);
   color: var(--white);
