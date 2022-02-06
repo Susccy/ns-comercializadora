@@ -10,6 +10,16 @@ function paginate() {
   paginationList.innerHTML = ""
 
   const productsArray = Array.from(productContainer.children)
+
+  if (!productsArray.length) {
+    const noProductsPlaceholder = document.createElement("p")
+    noProductsPlaceholder.appendChild(
+      document.createTextNode("No products available at the moment")
+    )
+    paginationList.appendChild(noProductsPlaceholder)
+    return
+  }
+
   const pageAmount = Math.ceil(productsArray.length / PRODUCTS_PER_PAGE)
 
   let currentPage
