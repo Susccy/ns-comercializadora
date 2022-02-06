@@ -65,127 +65,13 @@
             <div class="block-title">
               <h3>Categorías</h3>
             </div>
-            <ul class="block-content">
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Abrasivos</span>
-                  <small>(10)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Sólidos</span>
-                  <small>(7)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span> Soldadura</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Herramientas</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Cepillos de Alambre</span>
-                  <small>(10)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Productos de Lija</span>
-                  <small>(5)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Productos de Diamante</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Productos de Fibra</span>
-                  <small>(12)</small>
-                </label>
-              </li>
-            </ul>
+            <ul id="category-list" class="block-content"></ul>
           </div>
           <div>
             <div class="block-title">
               <h3>Marcas</h3>
             </div>
-            <ul class="block-content">
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Austromex</span>
-                  <small>(10)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Cinasa</span>
-                  <small>(7)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span> Maxtools</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Hecort</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Weston</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Makita</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Tulmex</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" name="" id="">
-                <label for="">
-                  <span>Tuk</span>
-                  <small>(3)</small>
-                </label>
-              </li>
-            </ul>
+            <ul id="brand-list" class="block-content"></ul>
           </div>
         </div>
         <div class="col-3-of-4">
@@ -208,8 +94,13 @@
             </div>
             <a href="">Aplicar</a>
           </form>
-          <div class="product-layout">
-            <div class="product">
+          <div id="product-container" class="product-layout">
+            <!-- @TODO add categories and brands to other products like this -->
+            <div
+              data-categories="Cat1 Cat2"
+              data-brands="Brand1 Brand2"
+              class="product"
+            >
               <div class="img-container">
                 <img src="./images/Productos/product-1.png" alt="" />
               </div>
@@ -331,8 +222,7 @@
             </div>
           </div>
           <!-- PAGINATION -->
-          <ul class="pagination">
-          </ul>
+          <ul id="pagination-list" class="pagination"></ul>
         </div>
       </div>
     </section>
