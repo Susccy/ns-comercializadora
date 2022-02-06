@@ -60,8 +60,8 @@ function paginate() {
   openPage(1)()
 }
 
-const categoryNames = []
-const brandNames = []
+const categoryNames = new Set()
+const brandNames = new Set()
 const activeFilters = {
   categories: [],
   brands: [],
@@ -70,8 +70,14 @@ const activeFilters = {
 for (const {
   dataset: {categories, brands},
 } of productContainer.children) {
-  categories?.length && categoryNames.push(...categories.split(/ /))
-  brands?.length && brandNames.push(...brands.split(/ /))
+  categories
+    ?.split(/ /)
+    .filter((cn) => cn)
+    .map(categoryNames.add, categoryNames)
+  brands
+    ?.split(/ /)
+    .filter((bn) => bn)
+    .map(brandNames.add, brandNames)
 }
 
 function filter({target}) {
@@ -90,16 +96,22 @@ function filter({target}) {
     for (const product of Object.values(productStore))
       productContainer.appendChild(product)
   else {
-    const matchingProducts = Object.values(productStore).filter(({dataset}) =>
-      dataset.categories
-        ?.split(/ /)
-        .some(
-          (category) =>
-            activeFilters.categories.includes(category) ||
-            dataset.brands
-              ?.split(/ /)
-              .some((brand) => activeFilters.brands.includes(brand))
-        )
+    const matchingProducts = Object.values(productStore).filter(
+      ({dataset}) =>
+        dataset.categories
+          ?.split(/ /)
+          .some(
+            (category) =>
+              !activeFilters.categories.length ||
+              activeFilters.categories.includes(category)
+          ) &&
+        dataset.brands
+          ?.split(/ /)
+          .some(
+            (brand) =>
+              !activeFilters.brands.length ||
+              activeFilters.brands.includes(brand)
+          )
     )
     for (const matchingProduct of matchingProducts) {
       productContainer.appendChild(matchingProduct)
@@ -137,11 +149,11 @@ function createFilterCheckbox(type, name) {
   return listItem
 }
 
-for (const categoryName of categoryNames) {
+for (const categoryName of [...categoryNames].sort()) {
   categoryList.appendChild(createFilterCheckbox("categories", categoryName))
 }
 
-for (const brandName of brandNames) {
+for (const brandName of [...brandNames].sort()) {
   brandList.appendChild(createFilterCheckbox("brands", brandName))
 }
 
